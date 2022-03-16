@@ -38,9 +38,4 @@ public class SubmarineServiceImpl implements SubmarineService {
     public List<Submarine> getAllSubmarines() {
         return submarineRepository.findAll();
     }
-
-    @Override
-    public Submarine getSubmarineById(Long id) {
-        return null;
-    }
 }

@@ -1,8 +1,10 @@
 package com.submarine.service;
 
+import com.submarine.exception.NotImplementedException;
 import com.submarine.model.Submarine;
 import jdk.jshell.spi.ExecutionControl;
 import org.hibernate.cfg.NotYetImplementedException;
+import org.springframework.web.client.HttpServerErrorException;
 
 import java.util.List;
 
@@ -16,5 +18,7 @@ public interface SubmarineService {
 
     List<Submarine> getAllSubmarines();
 
-    Submarine getSubmarineById(Long id);
+    default Submarine getSubmarineById(Long id){
+        throw new NotImplementedException();
+    }
 }
